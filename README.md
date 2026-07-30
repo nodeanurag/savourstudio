@@ -2,7 +2,9 @@
 
 **A white-label, production-ready dining branding engine and workspace.**
 
-Savor Studio is a premium, unified content workbench built for modern restaurant brands. It enables restaurateurs to describe their branding details, colors, fonts, menus, and promotions **once** in a single structured JSON object, and instantly generates beautifully branded, channel-specific assets for **Email Newsletters**, **Mobile Digital QR Menus**, and **Print-ready Dining Layouts**.
+Savor Studio is a premium, unified content workbench built for restaurant brands. It enables restaurateurs to describe their branding details, colors, fonts, menus, and promotions **once** in a single structured JSON object, and instantly generates beautifully branded, channel-specific assets for **Email Newsletters**, **Mobile Digital QR Menus**, and **Print-ready Dining Layouts**.
+
+![Savor Studio Landing Hero](public/assets/landing-hero.png)
 
 ---
 
@@ -23,20 +25,70 @@ Savor Studio addresses these challenges using the philosophy of **"One source of
 2. 📱 **Tableside Mobile Web Menu:** A mobile-first, interactive digital page featuring course filter categories, dietary badge indicators, and a live-generated, scannable tableside QR code.
 3. 📄 **Print Dining Menu & Kitchen Prep Cards:** A dual-mode print engine that outputs either a high-end, print-ready layout for physical dining tables or structured recipe cards for kitchen staff.
 
+### 🎨 Visual Theme Presets Catalog
+Restaurateurs can instantly swap their restaurant's aesthetic with 6 curated designer presets. The studio dynamically translates font pairings, palettes, border structures, and shadow profiles across all renderers.
+
+![Designed for every culinary style](public/assets/landing-presets.png)
+
+### 📣 Dining Brand Promo & Footer
+Visual marketing block detailing tableside digital menus and lifestyle-focused dining branding.
+
+![One schema to power every experience](public/assets/landing-footer.png)
+
 ---
 
-## 🎨 Premium Theme & Styling Engine
+## 🛠️ Multi-Channel Output Workspace
 
-Restaurateurs can instantly swap their restaurant's aesthetic with 6 curated designer presets. The studio dynamically translates font pairings, palettes, border structures, and shadow profiles across all renderers:
+Every restaurant template compiles to multiple outputs. The rendering logic preserves design tokens across all views:
 
-| Preset Name | Typography (Title / Body) | Visual Palette | Border & Accent Style |
-| :--- | :--- | :--- | :--- |
-| **Luxury Steakhouse** | Cormorant Garamond / Inter | Deep Obsidian & Champagne Gold | Double solid borders, thin ornate accents |
-| **Italian Trattoria** | Playfair Display / Outfit | Warm Terracotta, Olive, & Rust | Fine dotted borders, soft organic corners |
-| **Japanese Sushi** | Outfit / Inter | Pure Paper White, Coal Black, & Crimson | Sharp borders, minimalist solid blocks |
-| **French Bistro** | Cormorant Garamond / Outfit | Classic Deep Merlot, Royal Navy, & Brass | Solid heavy lines, rounded card profiles |
-| **Artisan Café** | Outfit / Inter | Soft Caramel, Muted Oats, & Cream | Thick rounded borders, shadow-free flats |
-| **Cocktail Lounge** | Playfair Display / Outfit | Midnight Blue, Neon Teal, & Hot Magenta | Glassmorphic cards, neon glows |
+### 💻 Split View Workspace Layout
+A split-screen workspace featuring the real-time **Studio Editor** panel on the left and a live-updating **Split Preview Viewport** showing all output channels simultaneously.
+
+![Workspace Split View Layout](public/assets/workspace-split-view.png)
+
+---
+
+## 🎨 Visual Presets & Theme Previews
+
+Below are previews of the interactive studio workspace running across different designer theme presets:
+
+#### Luxury Steakhouse Theme
+![Luxury Steakhouse Theme Workspace](public/assets/workspace-theme-steakhouse.png)
+
+#### Artisan Café Theme
+![Artisan Café Theme Workspace](public/assets/workspace-theme-artisan.png)
+
+#### Italian Trattoria Theme
+![Italian Trattoria Theme Workspace](public/assets/workspace-theme-trattoria.png)
+
+#### Japanese Sushi Theme
+![Japanese Sushi Theme Workspace](public/assets/workspace-theme-sushi.png)
+
+#### French Bistro Theme
+![French Bistro Theme Workspace](public/assets/workspace-theme-bistro.png)
+
+---
+
+## 🖥️ Format Renderers & Views
+
+* **[SavorEmail.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/SavorEmail.tsx):** Built using inline-styled HTML blocks optimized for email deliverability.
+* **[SavorWeb.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/SavorWeb.tsx):** High-fidelity mobile & desktop view featuring category selectors, dietary badges, and a live QR code using `qrcode.react`. Supports an `isWebpageMode` desktop browser frame mockup.
+* **[SavorDocument.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/SavorDocument.tsx):** Reconfigurable page that structures print layouts using CSS page-break constraints, supporting dual-layout outputs (Dining Menu vs Kitchen Prep Cards).
+* **[blocks.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/blocks.tsx):** Shared layout blocks built around the grid structures of `@unlayer/react-elements`.
+
+### Output Viewports
+
+#### Interactive Web QR Page
+A full-width, responsive digital tableside menu mockup.
+![Interactive Web QR Menu Preview](public/assets/workspace-web.png)
+
+#### High-End Printed Dining Menu
+Layout with print-tuned styling, pagination, and signature headers.
+![High-End Printed Dining Menu Preview](public/assets/workspace-document.png)
+
+#### Back-of-House Kitchen Recipe Cards
+A reconfigurable page layout outputting structured plating specs and recipe cards.
+![Kitchen Recipe Prep Cards Preview](public/assets/workspace-recipe-cards.png)
 
 ---
 
@@ -50,13 +102,7 @@ Driven by the strictly typed `RestaurantData` model containing:
 * **Contact & Operations:** Telephone number, address, email, operating hours, and social media handles.
 * **Quality & Plating Specs:** Live-editable recipe check-lists (`recipeSpecs`) that render line-by-line inside prep sheets.
 
-### 2. Format Renderers ([src/elements/](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/))
-* **[SavorEmail.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/SavorEmail.tsx):** Built using inline-styled HTML blocks optimized for email deliverability.
-* **[SavorWeb.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/SavorWeb.tsx):** High-fidelity mobile & desktop view featuring category selectors, dietary badges, and a live QR code using `qrcode.react`. Supports an `isWebpageMode` desktop browser frame mockup.
-* **[SavorDocument.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/SavorDocument.tsx):** Reconfigurable page that structures print layouts using CSS page-break constraints, supporting dual-layout outputs (Dining Menu vs Kitchen Prep Cards).
-* **[blocks.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/blocks.tsx):** Shared layout blocks built around the grid structures of `@unlayer/react-elements`.
-
-### 3. Exporter Engine & Capture Utils
+### 2. Exporter Engine & Capture Utils
 Compiles active React preview layouts into raw HTML strings using `react-dom/server`'s `renderToStaticMarkup`. Contains utilities for:
 * **JSON Download:** Exports the modified `restaurant.json` configuration file.
 * **HTML Copying:** Instantly copies compiled Email HTML or Document Print HTML to clipboard.
@@ -65,13 +111,22 @@ Compiles active React preview layouts into raw HTML strings using `react-dom/ser
 
 ---
 
-## 🛠️ Visual Polish & Workspace Layout
+## 🛠️ Workspace & Configuration Panels
 
 * **SaaS Landing Experience ([LandingPage.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/components/LandingPage.tsx)):** Features dark-mode aesthetics, glowing radial grids, and animated interactive mockups of the outputs using `framer-motion`.
-* **Studio Workbench ([StudioDashboard.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/components/StudioDashboard.tsx)):** A split-screen layout with:
-  * **Left Side - BrandEditor ([BrandEditor.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/components/BrandEditor.tsx)):** Scrollable accordion workspace supporting real-time editing of prices, descriptions, and dietary lists.
-  * **Right Side - PreviewLayout ([PreviewLayout.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/components/PreviewLayout.tsx)):** Responsive viewports showing live Email, Web (with desktop browser mockup and custom scroll controls), Document, and Split views side-by-side.
+* **Studio Workbench ([StudioDashboard.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/components/StudioDashboard.tsx)):** A split-screen layout containing the real-time configuration tabs for adjusting brand details, menu listings, and event cards.
 * **CSS Layout System ([index.css](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/index.css)):** Implements design tokens, keyframe animations, scroll customizers, and an escaped utility system mapping Tailwind utility classes back to pure Vanilla CSS.
+
+### Brand Editor Tabs
+
+#### Brand Information Configuration Panel
+![Brand Information Configuration Panel](public/assets/workspace-brand-editor.png)
+
+#### Menu Sections & Items Configuration Panel
+![Menu Sections & Items Configuration Panel](public/assets/workspace-menu-editor.png)
+
+#### Restaurant Highlights & Events Configuration Panel
+![Restaurant Highlights & Events Configuration Panel](public/assets/workspace-events-editor.png)
 
 ---
 
