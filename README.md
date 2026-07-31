@@ -71,10 +71,10 @@ Below are previews of the interactive studio workspace running across different 
 
 ## 🖥️ Format Renderers & Views
 
-* **[SavorEmail.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/SavorEmail.tsx):** Built using inline-styled HTML blocks optimized for email deliverability.
-* **[SavorWeb.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/SavorWeb.tsx):** High-fidelity mobile & desktop view featuring category selectors, dietary badges, and a live QR code using `qrcode.react`. Supports an `isWebpageMode` desktop browser frame mockup.
-* **[SavorDocument.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/SavorDocument.tsx):** Reconfigurable page that structures print layouts using CSS page-break constraints, supporting dual-layout outputs (Dining Menu vs Kitchen Prep Cards).
-* **[blocks.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/elements/blocks.tsx):** Shared layout blocks built around the grid structures of `@unlayer/react-elements`.
+* **[SavorEmail.tsx](src/elements/SavorEmail.tsx):** Built using inline-styled HTML blocks optimized for email deliverability.
+* **[SavorWeb.tsx](src/elements/SavorWeb.tsx):** High-fidelity mobile & desktop view featuring category selectors, dietary badges, and a live QR code using `qrcode.react`. Supports an `isWebpageMode` desktop browser frame mockup.
+* **[SavorDocument.tsx](src/elements/SavorDocument.tsx):** Reconfigurable page that structures print layouts using CSS page-break constraints, supporting dual-layout outputs (Dining Menu vs Kitchen Prep Cards).
+* **[blocks.tsx](src/elements/blocks.tsx):** Shared layout blocks built around the grid structures of `@unlayer/react-elements`.
 
 ### Output Viewports
 
@@ -94,7 +94,7 @@ A reconfigurable page layout outputting structured plating specs and recipe card
 
 ## ⚙️ Core Technical Architecture
 
-### 1. Data Schema & Engine ([types.ts](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/types.ts))
+### 1. Data Schema & Engine ([types.ts](src/types.ts))
 Driven by the strictly typed `RestaurantData` model containing:
 * **Branding:** Name, tagline, description, logo, and cover images.
 * **Menu Structure:** Grouped sections (Appetizers, Mains, Desserts, etc.) and individual items with pricing, dietary tags (Vegan, Gluten-free, etc.), and chef recommendations.
@@ -113,9 +113,9 @@ Compiles active React preview layouts into raw HTML strings using `react-dom/ser
 
 ## 🛠️ Workspace & Configuration Panels
 
-* **SaaS Landing Experience ([LandingPage.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/components/LandingPage.tsx)):** Features dark-mode aesthetics, glowing radial grids, and animated interactive mockups of the outputs using `framer-motion`.
-* **Studio Workbench ([StudioDashboard.tsx](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/components/StudioDashboard.tsx)):** A split-screen layout containing the real-time configuration tabs for adjusting brand details, menu listings, and event cards.
-* **CSS Layout System ([index.css](file:///d:/D%20drive/1/videos/movie/Elements/New%20folder/src/index.css)):** Implements design tokens, keyframe animations, scroll customizers, and an escaped utility system mapping Tailwind utility classes back to pure Vanilla CSS.
+* **SaaS Landing Experience ([LandingPage.tsx](src/components/LandingPage.tsx)):** Features dark-mode aesthetics, glowing radial grids, and animated interactive mockups of the outputs using `framer-motion`.
+* **Studio Workbench ([StudioDashboard.tsx](src/components/StudioDashboard.tsx)):** A split-screen layout containing the real-time configuration tabs for adjusting brand details, menu listings, and event cards.
+* **CSS Layout System ([index.css](src/index.css)):** Implements design tokens, keyframe animations, scroll customizers, and an escaped utility system mapping Tailwind utility classes back to pure Vanilla CSS.
 
 ### Brand Editor Tabs
 
